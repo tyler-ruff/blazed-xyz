@@ -32,12 +32,7 @@
     ],
     "rewrites": [
       {
-        "source": "/(.*)#(.*)",
-        "destination": "/$1",
-        "type": 301
-      },
-      {
-        "source": "/",
+        "source": "**",
         "destination": "/index.html"
       }
     ],
