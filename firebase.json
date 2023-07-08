@@ -9,6 +9,10 @@
   "functions": [
     {
       "source": "functions",
+      "predeploy": [
+        "npm --prefix \"$PROJECT_DIR\" install",
+        "npm --prefix \"$PROJECT_DIR\" run build"
+      ],
       "codebase": "default",
       "ignore": [
         "node_modules",
@@ -19,12 +23,18 @@
     }
   ],
   "hosting": {
+    "public": "dist",
     "site": "blazed-xyz",
-    "source": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/",
+        "destination": "/index.html"
+      }
     ],
     "frameworksBackend": {
       "region": "us-east1"
