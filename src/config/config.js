@@ -18,11 +18,11 @@ export const config = {
         },
         {
             label: "Browse",
-            url: "/#/catalog"
+            url: "/catalog"
         },
         {
             label: "Contact",
-            url: "/#/contact"
+            url: "/contact"
         }
     ],
     footerLinks: [
@@ -32,11 +32,11 @@ export const config = {
         },
         {
             label: "Browse",
-            url: "/#/catalog"
+            url: "/catalog"
         },
         {
             label: "Contact",
-            url: "/#/contact"
+            url: "/contact"
         },
         {
             label: "Blog",

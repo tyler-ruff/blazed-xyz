@@ -28,7 +28,7 @@
             <Card
                 v-bind:title="item.title"
                 v-bind:description="item.description"
-                v-bind:viewLink="`/#/view/${item.uid}`"
+                v-bind:viewLink="`/view/${item.uid}`"
                 v-bind:type="item.type"
             />
         </div>
