@@ -4,11 +4,13 @@ import BlzFooter from './components/BlzFooter.vue'
 </script>
 
 <template>
-    <BlzHeader />
-    <main class="md:p-10 bg-gray-50">
-        <router-view></router-view>
-    </main>
-  <BlzFooter />
+        <BlzHeader />
+        <Suspense>
+        <main class="md:p-10 bg-gray-50">
+            <router-view></router-view>
+        </main>
+        </Suspense>
+        <BlzFooter />
 </template>
 
 <style scoped>

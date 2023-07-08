@@ -11,6 +11,11 @@
                     Catalog
                 </a>
             </router-link>
+            <router-link to="/contact">
+                <a class="cursor-pointer btn btn-primary block w-full rounded hover:text-blue-700 hover:bg-blue-200 px-12 py-3 text-sm font-medium text-white shadow focus:outline-none focus:ring active:bg-blue-500 sm:w-auto">
+                    Contact
+                </a>
+            </router-link>
         </Hero>
     </div>
 </template>

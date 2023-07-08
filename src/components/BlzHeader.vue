@@ -1,4 +1,5 @@
 <script setup>
+    import { config } from '../config/config';
     function menuDrawerToggle(){
         const menuDrawerCheckbox = document.querySelector("#mobile-menu-drawer");
         if(menuDrawerCheckbox.checked === true){
@@ -12,25 +13,15 @@
     <header>
         <nav class="navbar shadow-lg">
             <div class="flex-1">
-                <a title="Blazed Publishing" href="/" class="btn btn-ghost group normal-case text-xl">
-                    <img class="group-hover:opacity-75" src="https://blazed.sirv.com/logo/Beaker-Dark.png?w=45&h=45" />
+                <a v-bind:title="config.title" href="/" class="btn btn-ghost group normal-case text-xl">
+                    <img class="group-hover:opacity-75" v-bind:src="config.logo" />
                 </a>
             </div>
             <div class="hidden md:flex navbar-end">
                 <ul class="menu menu-horizontal px-1">
-                    <li>
-                        <a href="/">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/#/catalog">
-                            Catalog
-                        </a>
-                    </li>
-                    <li>
-                        <a target="_blank" class="inline-flex" href="https://blazedlabs.com/blog">
-                            Blog
+                    <li v-for="item in config.menu">
+                        <a v-bind:href="item.url">
+                            {{ item.label }}
                         </a>
                     </li>
                 </ul>
@@ -64,19 +55,9 @@
                 <li class="btn-disabled pt-5 bg-transparent">
                     <hr />
                 </li>
-                <li>
-                    <a href="/">
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="/#/catalog">
-                        Catalog
-                    </a>
-                </li>
-                <li>
-                    <a target="_blank" class="inline-flex" href="https://blazedlabs.com/blog">
-                        Blog
+                <li v-for="item in config.menu">
+                   <a v-bind:href="item.url">
+                        {{ item.label }}
                     </a>
                 </li>
             </ul>

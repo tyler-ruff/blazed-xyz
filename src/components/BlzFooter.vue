@@ -1,18 +1,15 @@
 <script setup>
+    import { config } from '../config/config';
     const currentYear = new Date().getFullYear();
 </script>
 <template>
     <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded select-none">
         <div class="grid grid-flow-col gap-4">
-          <a href="/" class="link link-hover">
-            Home
-          </a> 
-          <a href="/#/catalog" class="link link-hover">
-            Catalog
-          </a>
-          <a href="https://blazed.contact/" class="link link-hover">
-            Contact
-          </a> 
+          <span v-for="item in config.footerLinks">
+            <a v-bind:href="item.url" class="link link-hover">
+              {{ item.label }}
+            </a> 
+          </span>
         </div> 
         <div>
           <div class="grid grid-flow-col gap-4">
