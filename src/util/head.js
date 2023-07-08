@@ -8,7 +8,6 @@ export default function build_head(){
         <link rel="apple-touch-startup-image" href="${config.icon}?w=180&h=180">
         <link rel="license" href="${config.license}">
         <link rel="author" href="${config.humans}">
-        <!-- Meta Tags -->
         <meta name="generator" content="blz-fire v2.0">
         <meta name="google" content="nositelinkssearchbox">
         <meta name="robots" content="index,follow">

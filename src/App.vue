@@ -1,14 +1,21 @@
 <script setup>
-import BlzHeader from './components/BlzHeader.vue'
-import BlzFooter from './components/BlzFooter.vue'
+    import BlzHeader from './components/BlzHeader.vue'
+    import BlzFooter from './components/BlzFooter.vue'
 </script>
 
 <template>
         <BlzHeader />
         <Suspense>
-        <main class="md:p-10 bg-gray-50">
-            <router-view></router-view>
-        </main>
+            <template #fallback>
+                <main>
+                    <span class="loading loading-spinner loading-xl"></span>
+                </main>
+            </template>
+            <template #default>
+                <main class="p-10 bg-gray-50">
+                    <router-view></router-view>
+                </main>
+            </template>
         </Suspense>
         <BlzFooter />
 </template>

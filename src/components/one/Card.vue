@@ -34,11 +34,6 @@
                 <p>
                     {{ description }}
                 </p>
-                <div class="card-actions justify-center">
-                    <button class="btn btn-primary">
-                        View
-                    </button>
-                </div>
             </div>
         </div>
     </a>

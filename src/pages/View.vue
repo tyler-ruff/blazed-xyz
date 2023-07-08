@@ -7,7 +7,7 @@
     import { useRoute } from 'vue-router'
     import router from './../util/router.js'
 
-    const route = useRoute()
+    const route = useRoute();
 
     const docRef = doc(firebase.db, "catalog", route.params.id);
     const docSnap = await getDoc(docRef);
@@ -20,7 +20,7 @@
             description: docSnap.data().description,
             type: docSnap.data().type,
             download: docSnap.data().download
-        }
+        };
     } else {
         router.push('/catalog');
     }

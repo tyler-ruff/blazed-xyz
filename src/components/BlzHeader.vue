@@ -19,8 +19,8 @@
             </div>
             <div class="hidden md:flex navbar-end">
                 <ul class="menu menu-horizontal px-1">
-                    <li v-for="item in config.menu">
-                        <a v-bind:href="item.url">
+                    <li v-for="(item, index) in config.menu" :key="index">
+                        <a v-bind:href="item.url" v-bind="">
                             {{ item.label }}
                         </a>
                     </li>
@@ -55,7 +55,7 @@
                 <li class="btn-disabled pt-5 bg-transparent">
                     <hr />
                 </li>
-                <li v-for="item in config.menu">
+                <li v-for="(item, index) in config.menu" :key="index">
                    <a v-bind:href="item.url">
                         {{ item.label }}
                     </a>

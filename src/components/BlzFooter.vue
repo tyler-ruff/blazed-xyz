@@ -5,7 +5,7 @@
 <template>
     <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded select-none">
         <div class="grid grid-flow-col gap-4">
-          <span v-for="item in config.footerLinks">
+          <span v-for="(item, index) in config.footerLinks" :key="index">
             <a v-bind:href="item.url" class="link link-hover">
               {{ item.label }}
             </a> 
