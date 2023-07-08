@@ -32,8 +32,9 @@
     ],
     "rewrites": [
       {
-        "source": "/**",
-        "destination": "/#/**"
+        "source": "/(.*)#(.*)",
+        "destination": "/$1",
+        "type": 301
       },
       {
         "source": "/",
