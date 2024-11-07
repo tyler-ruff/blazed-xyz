@@ -7,7 +7,9 @@ collections:
       - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image", required: false }
+      - { label: "Publish Date (Text)", name: "pubDate", widget: "string" }
+      - { label: "Featured Image", name: "heroImage", widget: "image", default: "/blog-placeholder-1.jpg" }
+      - { lablel: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
 
 media_folder: "/public" # Location where files will be stored in the repo
