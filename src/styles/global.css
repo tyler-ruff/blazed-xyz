@@ -1,14 +1,15 @@
-/* 
-	Blazed Publishing Styles
-	(c)2020-2025 Blazed Labs LLC
-	All Rights Reserved. 
-*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Hind+Vadodara&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
+	--silver: #c5c5c5;
+	--red: #fd151b;
+	--true-blue: #5171a5;
+	--english-violet: #3f3047;
+	--yellow: #eef36a;
 	--accent: #2337ff;
 	--accent-dark: #000d8a;
 	--black: 15, 18, 25;
@@ -19,20 +20,17 @@
 	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
 		0 16px 32px rgba(var(--gray), 33%);
 }
-@font-face {
-	font-family: 'HindVadodara';
-	src: url('https://storage.googleapis.com/blz-one-9e383.appspot.com/Fonts/HindVadodara/HindVadodara-Regular.ttf') format('ttf');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
+
+::selection{
+	background: var(--yellow);
+	color: rgb(var(--black));
 }
-@font-face {
-	font-family: 'DMSerif';
-	src: url('https://storage.googleapis.com/blz-one-9e383.appspot.com/Fonts/DMSerif/DMSerifText-Regular.ttf') format('ttf');
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
+
+::-moz-selection{
+	background: var(--yellow);
+	color: rgb(var(--black));
 }
+
 body {
 	font-family: 'HindVadodara', sans-serif;
 	margin: 0;
