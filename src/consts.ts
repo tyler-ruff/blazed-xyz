@@ -16,9 +16,9 @@ export const MAIN_MENU = [
         title: "Blog",
         path: "#",
         children: [
-            { title: "Hello 1", path: "/" },
-            { title: "Hello 2", path: "/" },
-            { title: "Hello 3", path: "/" },
+            { title: "Browse", path: "/blog" },
+            { title: "Categories", path: "/categories" },
+            { title: "Search", path: "/search" },
         ]
     },
     {

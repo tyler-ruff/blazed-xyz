@@ -52,7 +52,7 @@ h1, h2, h3{
 main {
 	width: 920px;
 	max-width: calc(100% - 2em);
-	margin: auto;
+	margin: 0 auto;
 	padding: 3em 1em;
 }
 
