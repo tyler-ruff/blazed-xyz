@@ -44,12 +44,18 @@ body {
 	font-size: 20px;
 	line-height: 1.7;
 }
+
+h1, h2, h3{
+	font-family: 'DM Serif Text', serif;
+}
+
 main {
 	width: 720px;
 	max-width: calc(100% - 2em);
 	margin: auto;
 	padding: 3em 1em;
 }
+
 h1,
 h2,
 h3,
@@ -133,7 +139,10 @@ hr {
 		font-size: 18px;
 	}
 	main {
-		padding: 1em;
+		padding: 0em;
+		width:100%;
+		max-width:100%;
+		margin:0;
 	}
 }
 
