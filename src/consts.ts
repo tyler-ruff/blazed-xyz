@@ -22,7 +22,7 @@ export const MAIN_MENU = [
         ]
     },
     {
-        title: "Contact",
-        path: "https://blazedlabs.com/contact"
-    },
+        title: "Media",
+        path: "/media"
+    }
 ];
