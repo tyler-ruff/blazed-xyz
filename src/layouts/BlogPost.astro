@@ -1,7 +1,6 @@
 ---
 import Layout from "./Layout.astro";
 import type { CollectionEntry } from 'astro:content';
-import FormattedDate from '../components/FormattedDate.astro';
 import Comments from "@/components/Comments.astro";
 
 import slugify from 'slugify';
@@ -17,7 +16,8 @@ let formatDate = (date: Date) => {
 			month: 'short',
 			day: 'numeric',
 	});
-}
+};
+
 let schema = JSON.stringify({
         "@context": "https://schema.org/",
         "@type": "Article",
@@ -38,8 +38,7 @@ let schema = JSON.stringify({
         }],
         "datePublished": formatDate(pubDate),
         "dateModified": formatDate(updatedDate || new Date()),
-        "description": "This coffee cake is awesome and perfect for parties.",
-        "prepTime": "PT20M"
+        "description": description,
 });
 ---
 <Layout title={title} description={description}>

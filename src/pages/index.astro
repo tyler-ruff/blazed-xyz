@@ -5,7 +5,31 @@ import FeaturedPosts from "@/components/FeaturedPosts.astro";
 import Subscribe from "@/components/Subscribe.astro";
 ---
 <Layout title="Home">
-	<Slideshow />
+	<Slideshow
+		 slideId="default-carousel"
+		 slideList={[
+			{
+				src: "/blog-placeholder-1.jpg",
+				alt: "Item 1"
+			},
+			{
+				src: "/blog-placeholder-2.jpg",
+				alt: "Item 2"
+			},
+			{
+				src: "/blog-placeholder-3.jpg",
+				alt: "Item 3"
+			},
+			{
+				src: "/blog-placeholder-4.jpg",
+				alt: "Item 4"
+			},
+			{
+				src: "/blog-placeholder-5.jpg",
+				alt: "Item 5"
+			}
+		 ]}
+	/>
 	<FeaturedPosts />
 	<Subscribe />
 </Layout>

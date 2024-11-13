@@ -1,6 +1,7 @@
 ---
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
+import { SITE_TITLE } from '@/consts';
 import '../styles/global.css';
 
 interface Props {
@@ -12,6 +13,13 @@ interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
+
+let schema = JSON.stringify({
+	"@context": "http://schema.org",
+	"@type": "WebSite",
+	"name": SITE_TITLE,
+	"url": "https://blazed.xyz"
+});
 ---
 
 <!-- Global Metadata -->
@@ -68,3 +76,6 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <link rel="author" href="https://blazedlabs.com/humans">
 <link rel="license" href="https://blazedlabs.com/license">
 <link rel="publisher" href="https://blazed.xyz">
+
+<!-- Schema -->
+<script type="application/ld+json" set:html={schema}></script>
