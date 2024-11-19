@@ -42,7 +42,13 @@ const { slideId, slideList } = Astro.props;
         </span>
     </button>
 </div>
-<style>
+<style is:global>
+    .dark .carousel button span{
+        background:rgba(255,255,255,0.4);
+    }
+    .dark .carousel button:hover span{
+        background:#fff;
+    }
     @media screen and (max-width:721px) {
         .carousel div img{
             border-radius: 0px;
